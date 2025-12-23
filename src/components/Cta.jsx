@@ -1,7 +1,7 @@
 import { Link } from '@tanstack/react-router';
 export default function Cta() {
   return (
-    <section id="register" className="py-32 text-center">
+    <section id="register" className="py-20  text-center">
       <h2 className="text-3xl font-semibold text-white mb-6">
         $ ready to start
       </h2>

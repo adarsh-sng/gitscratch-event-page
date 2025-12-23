@@ -1,23 +1,23 @@
 const speakers = [
   {
     name: "Alan K Biju",
-    role: "Industry Speaker",
-    image: "/Rishav Mishra _ 23BHI10011_ PR team.webp",
-    description:
-      "idk let the content team fill this in, now for testing filling with random text.",
+    role: "Bain Analyst Intern | Competitive Programmer",
+    image: "/Alan.webp",
+    objectPosition: "object-center",
+    linkedin: "https://www.linkedin.com/in/alan-k-biju/",
   },
   {
     name: "Eeman Majumdar",
-    role: "Industry Speaker",
-    image: "/Rishav Mishra _ 23BHI10011_ PR team.webp",
-    description:
-      "idk let the content team fill this in, now for testing filling with random text.",
+    role: "SIH Hackathon Winner | Deloitte Data Sciencntist",
+    image: "/eeman.webp",
+    objectPosition: "object-top",
+    linkedin: "https://www.linkedin.com/in/eeman-majumder-2184331a2",
   },
 ];
 
 export default function Speakers() {
   return (
-    <section id="speakers" className="max-w-7xl mx-auto px-6 py-24">
+    <section id="speakers" className="max-w-7xl mx-auto px-6 py-20">
       <h2 className="text-2xl font-semibold text-white mb-12">Speakers</h2>
 
       <div className="grid md:grid-cols-2 gap-10">
@@ -35,23 +35,38 @@ export default function Speakers() {
             <img
               src={speaker.image}
               alt={speaker.name}
-              className="w-40 h-40 rounded-3xl object-cover
+              className={`w-44 h-44 rounded-3xl object-fit
                          border-2 border-white/20
-                         mb-6 sm:mb-0
-                         group-hover:brightness-110 transition"
+                         mb-2 sm:mb-0
+                         group-hover:brightness-110 transition ${
+                           speaker.objectPosition ?? ""
+                         }`}
             />
 
             {/* Speaker Info */}
-            <div className="space-y-2 text-center sm:text-left">
-              <h3 className="text-xl font-semibold text-white tracking-tight">
+            <div className="space-y-2 text-center sm:text-left mx-8">
+              <h3 className="text-xl font-semibold text-white tracking-tight ">
                 {speaker.name}
               </h3>
-              <p className="text-sm font-medium text-blue-300/80 uppercase tracking-wide">
+              <p className="text-md font-medium text-blue-300/80 uppercase tracking-wide">
                 {speaker.role}
               </p>
-              <p className="text-sm text-white/60 leading-relaxed">
-                {speaker.description}
-              </p>
+              {speaker.linkedin && (
+                <div className="pt-2">
+                  <a
+                    href={speaker.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full border border-blue-400/60 px-4 py-1.5 text-sm text-blue-100 transition hover:border-blue-300 hover:text-white"
+                  >
+                    <span
+                      className="size-2 rounded-full bg-blue-400"
+                      aria-hidden
+                    />
+                    LinkedIn
+                  </a>
+                </div>
+              )}
             </div>
           </div>
         ))}

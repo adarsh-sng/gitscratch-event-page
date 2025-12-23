@@ -19,7 +19,7 @@ export default function Navbar() {
         <div className="flex items-center">
           <img src="/notion.png" className="h-8 w-8 object-contain mr-3" />
           <span className="text-white/40 scale-110">×</span>
-          <img src="/aiclub.svg" className="h-10 w-16 object-contain -ml-1" />
+          <img src="/aiclubc.svg" className="h-10 w-16 object-contain -ml-1" />
         </div>
 
         <div className="hidden md:flex gap-6 text-sm text-white/80">

@@ -86,27 +86,27 @@ function RouteComponent() {
     }
   };
   return (
-    <div className="flex flex-col  bg-notion items-center py-6 px-4 sm:px-4 lg:px-8">
-      <div className="flex items-center mb-4">
+    <div className="flex flex-col  bg-notion items-center py-6 px-4 mb-4 sm:px-8 lg:px-8">
+      <div className="flex items-center mb-5">
         <img src="/notion.png" className="h-10 w-10 object-contain mr-3" />
         <span className="text-white/40 scale-110">×</span>
-        <img src="/aiclub.svg" className="h-16 w-20 object-contain -ml-1" />
+        <img src="/aiclubc.svg" className="h-12 w-20 object-contain -ml-1" />
       </div>
       <main className="grow justify-center">
-        <div className="w-full max-w-lg bg-white/5 backdrop-blur rounded-2xl shadow-lg ring-1 ring-white/6 p-8">
+        <div className="w-full max-w-3xl bg-white/5 backdrop-blur rounded-2xl shadow-lg ring-1 ring-white/6 p-8 sm:p-12">
           {registered ? (
             <SuccessScreen />
           ) : (
             <>
               <h1 className="text-2xl sm:text-3xl font-semibold text-white mb-6">
-                Register for the $GitScratch
+                Register for the  <span className="text-green-400">$</span>GitScratch
               </h1>
               <p className="text-sm text-white/70 mb-6">
                 Fill in your details to secure your spot.
               </p>
 
               <form
-                className="space-y-5"
+                className="space-y-4"
                 onSubmit={handleSubmit}
                 action={
                   "https://docs.google.com/forms/d/e/1FAIpQLSeepxwIRtyWKiHdBspRTtSXHaLBSPqtNqXiRKJJIHKyi-AxSw/formResponse?"
@@ -117,7 +117,7 @@ function RouteComponent() {
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-sm font-medium text-white/80 mb-2"
+                    className="block text-sm font-medium text-white/80 mb-1"
                   >
                     Name
                   </label>
@@ -143,7 +143,7 @@ function RouteComponent() {
                 <div>
                   <label
                     htmlFor="regno"
-                    className="block text-sm font-medium text-white/80 mb-2"
+                    className="block text-sm font-medium text-white/80 mb-1"
                   >
                     Registration Number
                   </label>
@@ -169,7 +169,7 @@ function RouteComponent() {
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-white/80 mb-2"
+                    className="block text-sm font-medium text-white/80 mb-1"
                   >
                     Email ID
                   </label>
@@ -198,7 +198,7 @@ function RouteComponent() {
                     disabled={loading}
                     fireOnClick={false}
                     ref={submitButtonRef}
-                    className="w-full inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 px-4 py-2 text-white font-medium shadow-md hover:from-blue-500 hover:to-indigo-500 transition disabled:opacity-50"
+                    className="w-full text-lg inline-flex items-center justify-center rounded-lg bg-[#0a66c2] hover:bg-[#004182] transition text-white font-medium px-4 py-6 mt-4"
                   >
                     {loading ? "Submitting..." : "Submit Registration"}
                   </ConfettiButton>
