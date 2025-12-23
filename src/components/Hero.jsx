@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import posterImage from "../assets/aiconic2.webp";
+import posterImage from "../assets/poster.webp";
 export default function Hero() {
   return (
     <section className="bg-fixed">
