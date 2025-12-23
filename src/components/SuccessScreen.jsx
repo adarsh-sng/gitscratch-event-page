@@ -3,7 +3,7 @@ import { useState } from "react";
 export default function SuccessScreen({ message }) {
   const [copied, setCopied] = useState(false);
 
-  const siteUrl = "https://aiclub.vercel.app";
+  const siteUrl = "https://gitscratch.vercel.app/";
 
   const handleCopy = async () => {
     try {
